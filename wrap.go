@@ -26,7 +26,6 @@ var (
 // Retry accepts func with any arguments but with only one error return type in return set
 // If func return multiple error types - only last one will be seen in wrapped errors set after retries
 func Retry(inner any, args []any, opts ...retry.Option) (func() (Response, error), error) {
-
 	retry.DefaultAttempts = DefaultAttempts
 	retry.DefaultDelay = DefaultDelay
 	retry.DefaultMaxJitter = DefaultMaxJitter
