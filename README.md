@@ -1,9 +1,11 @@
+
 # Wrap
-## Wrap is a simple golang utility used to wrap (decorate) just any function and add retry mechanism
 
-## !NOT! for production, just 4 fun
+Wrap is a simple golang utility used to wrap (decorate) just any function and add retry mechanism
 
-### Based on github.com/avast/retry-go
+
+## NOT FOR PRODUCTION USE. J4F.
+## What's this
 
 Small lib that allows you to apply retries to literally any function, regardless of return values and input params.
 This is not an exact decorator as it modifies return type.
@@ -13,12 +15,10 @@ As a result of a decorated function execution you will receive an array containi
 
 Retry options can be passed as a last argument in Retry function or modified globally.
 
-#### Usage
 
+
+## Usage/Examples
 `go get github.com/maxan98/wrap`
-
-Example usage:
-
 ```go
 package main
 
@@ -54,3 +54,9 @@ func main() {
 	fmt.Println("err", err)
 }
 ```
+
+
+## Appendix
+
+Based on github.com/avast/retry-go
+
